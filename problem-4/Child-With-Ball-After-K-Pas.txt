@@ -1,0 +1,18 @@
+class Solution:
+    def numberOfChild(self, n: int, k: int) -> int:
+        total_len = n - 1
+        current_kid = 0
+        for j in range(k):
+            if current_kid == 0:
+                dir = 'right'
+            elif current_kid == total_len:
+                dir = 'left'
+            if dir == 'right':
+                current_kid += 1
+            else:
+                current_kid -= 1
+        print(current_kid)
+        return current_kid
+
+
+        
